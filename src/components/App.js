@@ -19,8 +19,11 @@ export default class App extends Component {
       console.log('Q!Q',URL)
       fetch(URL)
       .then(res => {
-        console.log(res.json())
-        this.setState({resultJSON : [JSON.stringify(res.json())]})
+        return res.json()
+      })
+      .then(response => {
+        console.log(response)
+        this.setState({resultJSON : [JSON.stringify(response)]})
       })
     }
 
