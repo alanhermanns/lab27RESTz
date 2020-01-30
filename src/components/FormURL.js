@@ -1,10 +1,12 @@
 import React from 'react';
 
-const FormURLAndMethods = ({URLHandler, methodHandler, sendTextToState}) => {
+const FormURLAndMethods = ({URLHandler, methodHandler, sendTextToState, sendBodyToState}) => {
     return (
         <>
         <form onSubmit={URLHandler}>
         <input type='text' onChange={sendTextToState}/>
+          <label>Body</label>
+          <input type='text' onChange={sendBodyToState}></input>
         <button type='submit'>Andale</button>
         </form>
 
