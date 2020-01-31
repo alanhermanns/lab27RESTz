@@ -1,10 +1,8 @@
 
-const hitApi = (method, URL) => {
+const hitApi = (URL, method, BODY) => {
     fetch(URL, {
         'METHOD': method,
-        'type':'application/json' 
-    },{
-
+        'body': JSON.stringify(BODY)
     })
 }
 

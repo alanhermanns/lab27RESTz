@@ -1,15 +1,18 @@
 import React from 'react'
 let historyLis;
 const History = ({history}) => {
-    console.log(history)
-    historyLis = history.map(item => (
-        (
+    historyLis = history.map(item => {
+        console.log(item)
+        
+        return (       
             <li>
-              {item}
+
+            <a href={item}>
+            {item}
+            </a>
             </li>
         )
-    ));
-    console.log('!!!!!!!!!!', historyLis)
+    });
     return (
         <ul>
             {historyLis}
