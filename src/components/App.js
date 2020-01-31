@@ -31,6 +31,7 @@ export default class App extends Component {
       }
       else fetch(URL, {
         'method': Method,
+        'type':'application/json',
         'body': JSON.stringify(BODY)
       })
       .then(res => {
